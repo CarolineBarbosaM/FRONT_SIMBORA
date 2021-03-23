@@ -19,19 +19,17 @@ const useStyles = makeStyles((theme) => ( {
     },
 
     avatar: {
-        width: theme.spacing(7),
-        height: theme.spacing(7),
-        marginLeft: 100
+        marginLeft: 70
     },
 
     name: {
         width: theme.spacing(7),
         height: theme.spacing(7),
-        marginLeft: 50
+        marginLeft: 20
     },
 
     more: {
-        marginLeft: 100
+        marginLeft: 50
     }
 }));
 
