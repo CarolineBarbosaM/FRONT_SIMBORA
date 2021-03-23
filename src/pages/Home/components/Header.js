@@ -44,7 +44,7 @@ function Header() {
                 <img src="/images/logo.png" alt="logo" className={classes.img} />
                 <div className={classes.grow}></div>
                 <div className={classes.userSection}>
-                    <Button color="primary" className={classes.button}>+</Button>
+                    <Button  className={classes.button}>+</Button>
                     <SvgIcon className={classes.bell}><Bell></Bell></SvgIcon>
                     <Avatar alt="Remy Sharp" src="" />
                 </div>
