@@ -4,7 +4,7 @@ import typography from './typography';
 
 
 const theme = createMuiTheme({
-    palette,
+    pallet,
     typography
 });
 

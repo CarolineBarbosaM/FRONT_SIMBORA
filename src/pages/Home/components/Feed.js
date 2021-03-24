@@ -1,12 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import PostCard from '../../../components/PostCard';
 
-const useStyles = makeStyles((theme) => ({
+/*const useStyles = makeStyles((theme) => ({
     root: {
 
     }
-}));
+}));*/
 
 const posts = [
     {
@@ -41,7 +41,7 @@ const posts = [
 
 function Feed() {
 
-    const classes = useStyles();
+    //const classes = useStyles();
 
     return (
         <div>
