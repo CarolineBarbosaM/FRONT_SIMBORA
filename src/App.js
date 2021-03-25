@@ -1,9 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { BrowserRouter, Routes, Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import theme from './theme';
 import Singin from './pages/singin';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -11,9 +12,12 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
-      <Singin />
-          
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact={true} element={<Home/>}/>
+          <Route path="/singin" exact={true} element={<Singin/>}/>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
