@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import theme from './theme';
 import Singin from './pages/singin';
+import Singup from './pages/singup';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" exact={true} element={<Home/>}/>
           <Route path="/singin" exact={true} element={<Singin/>}/>
+          <Route path="/singup" exact={true} element={<Singup/>}/>
+          <Route path="*" exact={true} element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

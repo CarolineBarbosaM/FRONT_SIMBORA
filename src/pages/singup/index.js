@@ -62,11 +62,11 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonSinginup: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#8C52FF',
         borderRadius: '10px',
         border: 1,
         borderBottom: '1px solid 8C52FF',
-        color: 'black',
+        color: 'white',
         padding: '8px 15px',
         textAlign: 'center',
         textDecoration: 'none',
@@ -79,11 +79,11 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonSinginin: {
-        backgroundColor: '#8C52FF',
+        backgroundColor: '#ffffff',
         borderRadius: '10px',
         border: 0,
         borderBottom: '1px solid #8C52FF',
-        color: 'white',
+        color: 'black',
         padding: '8px 15px',
         textAlign: 'center',
         textDecoration: 'none',
@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '12px',
         cursor: 'pointer',
         float: 'right',
-        marginTop: '2%',
+        marginTop: '-2%',
         marginRight: '53%'
     },
 
@@ -149,8 +149,13 @@ function Singin() {
 
                <form className={classes.form}>
                     <div className={classes.inputContainer}>
-                        <label className={classes.label} valid focus>E-mail</label>
+                        <label className={classes.label} valid focus>Nome</label>
                         <input className={classes.input} type="email" valid focus required />
+                    </div>
+
+                    <div className={classes.inputContainer}>
+                        <label className={classes.label} valid focus>E-mail</label>
+                        <input className={classes.input} type="password" valid focus required />
                     </div>
 
                     <div className={classes.inputContainer}>
@@ -158,9 +163,6 @@ function Singin() {
                         <input className={classes.input} type="password" valid focus required />
                     </div>
                </form>
-               <div className={classes.password}>
-                    <a href=''>Esqueceu a sua senha?</a>
-                </div>
 
                 <div className={classes.button}>
                     <button className={classes.singin}>Sing in</button>
