@@ -1,5 +1,8 @@
 import React from 'react';
+import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
+import { useNavigate } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -133,6 +136,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Singin() {
     const classes = useStyles();
+    const navigate = useNavigate();
 
     return (
         <div className={classes.root}>
@@ -144,8 +148,9 @@ function Singin() {
             </div>
 
             <div className={classes.right}>
-                <button className={classes.buttonSinginup}>&nbsp;&nbsp;&nbsp;Sing up</button>
-                <button className={classes.buttonSinginin}>Sing in</button>
+                <button className={classes.buttonSinginup} onClick={() => navigate('/singup')}>&nbsp;&nbsp;&nbsp;Sing up</button>
+                <button className={classes.buttonSinginin} onClick={() => navigate('/singin')}>Sing in</button>
+
 
                <form className={classes.form}>
                     <div className={classes.inputContainer}>
@@ -165,7 +170,7 @@ function Singin() {
                </form>
 
                 <div className={classes.button}>
-                    <button className={classes.singin}>Sing in</button>
+                    <button className={classes.singin}>Sing up</button>
                 </div>
             </div>
         </div>

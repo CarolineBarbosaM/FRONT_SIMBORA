@@ -1,5 +1,7 @@
 import React from 'react';
+import axios from '../../utils/axios';
 import { makeStyles } from '@material-ui/core/styles';
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -133,6 +135,15 @@ const useStyles = makeStyles((theme) => ({
 
 function Singin() {
     const classes = useStyles();
+    const navigate = useNavigate();
+
+    async function handleSingin(){
+        // chamada a api
+        // se retorno ok, direciona para home
+        // senao exibe mensagem para o usuario
+        const response = await axios.post('/api/home/login')
+        console.log(response);
+    }
 
     return (
         <div className={classes.root}>
@@ -144,8 +155,8 @@ function Singin() {
             </div>
 
             <div className={classes.right}>
-                <button className={classes.buttonSinginup}>&nbsp;&nbsp;&nbsp;Sing up</button>
-                <button className={classes.buttonSinginin}>Sing in</button>
+                <button className={classes.buttonSinginup} onClick={() => navigate('/singup')}>&nbsp;&nbsp;&nbsp;Sing up</button>
+                <button className={classes.buttonSinginin} onClick={() => navigate('/singin')}>Sing in</button>
 
                <form className={classes.form}>
                     <div className={classes.inputContainer}>
@@ -163,7 +174,7 @@ function Singin() {
                 </div>
 
                 <div className={classes.button}>
-                    <button className={classes.singin}>Sing in</button>
+                    <button className={classes.singin} onClick={handleSingin}>Sing in</button>
                 </div>
             </div>
         </div>

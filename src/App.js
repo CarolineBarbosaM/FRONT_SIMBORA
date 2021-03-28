@@ -1,11 +1,13 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home';
 import theme from './theme';
 import Singin from './pages/singin';
 import Singup from './pages/singup';
-import NotFound from './pages/NotFound';
+
+import './mook';
 
 function App() {
 
@@ -18,7 +20,6 @@ function App() {
           <Route path="/" exact={true} element={<Home/>}/>
           <Route path="/singin" exact={true} element={<Singin/>}/>
           <Route path="/singup" exact={true} element={<Singup/>}/>
-          <Route path="*" exact={true} element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
